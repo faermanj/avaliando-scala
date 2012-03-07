@@ -10,7 +10,7 @@ case object Pare
 class Calculador extends Actor {
   val rand = new Random
   var pi, in, cnt = 1.0
-  
+
   def act() {
     while (true) {
       receive {
@@ -25,7 +25,7 @@ class Calculador extends Actor {
     val x = rand.nextDouble - 0.5
     val y = rand.nextDouble - 0.5
     cnt += 1.0;
-    if (sqrt(x*x + y*y) < 0.5) in += 1
+    if (sqrt(x * x + y * y) < 0.5) in += 1
     return in / cnt * 4
   }
 }
